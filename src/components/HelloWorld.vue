@@ -1,5 +1,6 @@
 <template>
   <h1>{{ msg }}</h1>
+  <p>count:{{count}}</p>
 </template>
 
 <script lang="ts">
@@ -13,7 +14,8 @@ export default defineComponent({
     }
   },
   setup: () => {
-    const count = ref(0)
+    const count = ref(0);
+    count.value ++;
     return { count }
   }
 })
